@@ -1,0 +1,66 @@
+{
+	"pages": [
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "婚礼定制"
+			}
+		},
+		{
+			"path": "pages/category/category",
+			"style": {
+				"navigationBarTitleText": "分类"
+			}
+		},
+		{
+			"path": "pages/order/order",
+			"style": {
+				"navigationBarTitleText": "订单"
+			}
+		},
+		{
+			"path": "pages/mine/mine",
+			"style": {
+				"navigationBarTitleText": "我的"
+			}
+		}
+	],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "婚礼定制",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8"
+	},
+	"tabBar": {
+		"color": "#999999",
+		"selectedColor": "#e8495a",
+		"borderStyle": "black",
+		"backgroundColor": "#ffffff",
+		"list": [
+			{
+				"pagePath": "pages/index/index",
+				"iconPath": "static/tab/home-active.png",
+				"selectedIconPath": "static/tab/home-active.png",
+				"text": "首页"
+			},
+			{
+				"pagePath": "pages/category/category",
+				"iconPath": "static/tab/category-active.png",
+				"selectedIconPath": "static/tab/category-active.png",
+				"text": "分类"
+			},
+			{
+				"pagePath": "pages/order/order",
+				"iconPath": "static/tab/order-active.png",
+				"selectedIconPath": "static/tab/order-active.png",
+				"text": "订单"
+			},
+			{
+				"pagePath": "pages/mine/mine",
+				"iconPath": "static/tab/mine-active.jpg",
+				"selectedIconPath": "static/tab/mine-active.jpg",
+				"text": "我的"
+			}
+		]
+	}
+}

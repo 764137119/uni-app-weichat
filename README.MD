@@ -7,7 +7,7 @@
 #### 第三步、pnpm install
 #### 第四步、pnpm dev:mp-weixin
 ##### 执行完成第四步会有 说明提示 使用微信开发者工具代开什么目录。
-#### 第五步、使用微信开发者工具打开上一步骤输出的制定目录
+#### 第五步、使用微信开发者工具打开上一步骤输出的指定目录
 
 ## 引入Ui组件
 
@@ -26,7 +26,7 @@ pnpm add wot-design-uni
 # pnpm add sass@1.78.0 -D
 # pnpm add -D @types/node
 ```
-完全理解！如果你使用的是 VS Code 等纯代码编辑器，没有安装 HBuilderX，那么我们就**彻底放弃 `uni_modules` 的方式，全程使用 `npm/pnpm` 命令行来配置**。
+使用的是 VS Code 等纯代码编辑器，没有安装 HBuilderX，**彻底放弃 `uni_modules` 的方式，全程使用 `npm/pnpm` 命令行来配置**。
 
 其实，Wot Design Uni 官方同样支持纯 npm 安装，并且提供了基于 Vite 的自动导入插件，这种方式在现代前端工程化中非常流行。
 
@@ -91,4 +91,4 @@ rm -rf node_modules/.vite dist/dev/mp-weixin
 pnpm run dev:mp-weixin
 ```
 
-按照这个纯命令行的流程配置，你的新项目就能完美、无报错地跑起 Wot Design Uni 了！如果还有任何报错，随时发给我。
+按照这个纯命令行的流程配置，你的新项目就能完美、无报错地跑起 Wot Design Uni 了！。

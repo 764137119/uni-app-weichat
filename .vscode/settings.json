@@ -1,0 +1,9 @@
+{
+    "vue-format.format_need": [
+        "vue",
+        "ts",
+        "html",
+        "js",
+        "css"
+    ]
+}

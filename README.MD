@@ -21,10 +21,10 @@
 ```bash
 pnpm add wot-design-uni
 # 或使用 npm / yarn
-# npm install wot-design-uni
 # yarn add wot-design-uni
 # pnpm update wot-design-uni
-#pnpm add sass@1.78.0 -D
+# pnpm add sass@1.78.0 -D
+# pnpm add -D @types/node
 ```
 完全理解！如果你使用的是 VS Code 等纯代码编辑器，没有安装 HBuilderX，那么我们就**彻底放弃 `uni_modules` 的方式，全程使用 `npm/pnpm` 命令行来配置**。
 

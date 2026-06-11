@@ -4,4 +4,4 @@ commit:
 	else \
 		input_msg="$(msg)"; \
 	fi; \
-	git add . && git commit -m "$$input_msg"
+	git add . && git commit -m "$$input_msg" && git push 

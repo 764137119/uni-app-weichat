@@ -1,7 +1,11 @@
 <template>
   <view class="page-layout">
     <view>
-      <textarea name="search" id="" cols="30" rows="10"></textarea>
+      <wd-input v-model="value" type="text"prefix-icon="sound" suffix-icon="send" placeholder="果切地址9.9元起" @input="handleInput"  @clickprefixicon="handlePrefixClick" @clicksuffixicon="handleSuffixClick">
+        <template #suffix>
+    <wd-button size="small" @click="handButtonClick">搜索</wd-button>
+  </template>
+    </wd-input>
       <view >
         /*
         此处为4*4的图片加文字 路由
@@ -9,11 +13,10 @@
     <view
       v-for="(item, index) in navList"
       :key="index"
-      class="grid-nav__item"
       @click="handleNavClick(item)"
     >
-      <image class="grid-nav__icon" :src="item.icon" mode="aspectFit" />
-      <text class="grid-nav__label">{{ item.label }}</text>
+      <image  :src="item.icon" mode="aspectFit" />
+      <text >{{ item.label }}</text>
     </view>
   </view>
     </view>
@@ -25,7 +28,24 @@
 
 <script setup lang="ts">
 import { ref } from 'vue'
-const title = ref('Hello')
+const value = ref<string>('')
+
+const handleInput =(event:any)=> {
+  console.log(event)
+}
+
+const handlePrefixClick=(event:any)=>{
+  console.log(event)
+}
+
+const handleSuffixClick=(event:any)=>{
+  console.log(event)
+}
+
+const handButtonClick=(event:any)=>{
+  console.log(event)
+}
+
 interface NavList{
  label:string,
   icon:string,

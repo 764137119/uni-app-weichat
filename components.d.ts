@@ -13,6 +13,8 @@ declare module 'vue' {
   export interface GlobalComponents {
     TabNavButtons: typeof import('./src/components/TabNavButtons.vue')['default']
     WdButton: typeof import('wot-design-uni/components/wd-button/wd-button.vue')['WdButton']
+    WdImg: typeof import('wot-design-uni/components/wd-img/wd-img.vue')['WdImg']
     WdInput: typeof import('wot-design-uni/components/wd-input/wd-input.vue')['WdInput']
+    WdSwiper: typeof import('wot-design-uni/components/wd-swiper/wd-swiper.vue')['WdSwiper']
   }
 }

@@ -1,27 +1,21 @@
 <template>
-    <view class="page-layout">
+<view class="page-layout">
 
-        <wd-input class="page-layout__header" v-model="wdInputValue" type="text" prefix-icon="sound" suffix-icon="send"
-            placeholder="果切地址9.9元起" @input="handleInput" @clickprefixicon="handlePrefixClick"
-            @clicksuffixicon="handleSuffixClick">
-            <template #suffix>
-                <wd-button size="small" @click="handButtonClick">搜索</wd-button>
-            </template>
-        </wd-input>
-        <view class="page-layout__main">
-            <view class="grid-nav">
-                <view class="grid-item" v-for="(item, index) in navList" :key="index" @click="handleNavClick(item)">
-                    <image :src="item.icon" />
-                    <span>{{ item.label }}</span>
-                </view>
+    <wd-input class="page-layout__header" v-model="wdInputValue" type="text" prefix-icon="sound" suffix-icon="send" placeholder="果切地址9.9元起" @input="handleInput" @clickprefixicon="handlePrefixClick" @clicksuffixicon="handleSuffixClick">
+        <template #suffix>
+            <wd-button size="small" @click="handButtonClick">搜索</wd-button>
+        </template>
+    </wd-input>
+    <view class="page-layout__main">
+        <view class="grid-nav">
+            <view class="grid-item" v-for="(item, index) in navList" :key="index" @click="handleNavClick(item)">
+                <image :src="item.icon" />
+                <span>{{ item.label }}</span>
             </view>
         </view>
-        <wd-swiper class="page-layout__footer" :list="swiperList" :autoplay="true" :loop="true">
-            <template #item="{ item }">
-                <image :src="item.src" mode="aspectFill" style="width: 100%; height: 100%;" />
-            </template>
-        </wd-swiper>
     </view>
+    <wd-swiper class="page-layout__footer" :list="swiperList" v-model:current="current" :autoplay="true" :loop="true" :indicator="{ type: 'dots-bar' }" :height="footerHeight"></wd-swiper>
+</view>
 </template>
 
 <script setup lang="ts">
@@ -29,7 +23,9 @@ import {
     ref
 } from 'vue'
 
-const wdInputValue = ref<string>('')
+const wdInputValue = ref < string > ('')
+
+const current=ref<number>(1)
 
 const handleInput = (event: any): void => {
     console.log(event)
@@ -47,6 +43,8 @@ const handButtonClick = (event: any) => {
     console.log(event)
 }
 
+const footerHeight = ref<string>('300rpx')
+
 const swiperList: string[] = [
     "/static/鲜花水果.jpg",
     "/static/蔬菜豆制品.jpg",
@@ -55,89 +53,89 @@ const swiperList: string[] = [
 
 interface NavList {
     label: string,
-    icon: string,
-    path: string
+        icon: string,
+        path: string
 }
 const navList: NavList[] = [{
-    label: '鲜花水果',
-    icon: '/static/鲜花水果.jpg',
-    path: 'pages/category/category'
-},
-{
-    label: '蔬菜豆制品',
-    icon: '/static/蔬菜豆制品.jpg',
-    path: 'pages/category/category'
-},
-{
-    label: '肉禽蛋',
-    icon: '/static/肉禽蛋.jpg',
-    path: 'pages/category/category'
-},
-{
-    label: '纸品湿巾',
-    icon: '/static/纸品湿巾.png',
-    path: 'pages/category/category'
-},
-{
-    label: '烧烤露营',
-    icon: '/static/烧烤露营.jpg',
-    path: 'pages/category/category'
-},
-{
-    label: '乳品烘培',
-    icon: '/static/乳品烘培.jpg',
-    path: 'pages/category/category'
-},
-{
-    label: '日用清洁',
-    icon: '/static/日用清洁.jpg',
-    path: 'pages/category/category'
-},
-{
-    label: '粮油调味',
-    icon: '/static/粮油调味.png',
-    path: 'pages/category/category'
-},
-{
-    label: '酒水饮料',
-    icon: '/static/酒水饮料.jpg',
-    path: 'pages/category/category'
-},
-{
-    label: '海鲜水产',
-    icon: '/static/海鲜水产.jpg',
-    path: 'pages/category/category'
-},
-{
-    label: '个护美妆',
-    icon: '/static/个护美妆.png',
-    path: 'pages/category/category'
-},
-{
-    label: '冻品面点',
-    icon: '/static/冻品面点.jpg',
-    path: 'pages/category/category'
-},
-{
-    label: '打边炉',
-    icon: '/static/打边炉.png',
-    path: 'pages/category/category'
-},
-{
-    label: '宠物用品',
-    icon: '/static/宠物用品.jpeg',
-    path: 'pages/category/category'
-},
-{
-    label: '冰淇淋',
-    icon: '/static/冰淇淋.jpg',
-    path: 'pages/category/category'
-},
-{
-    label: 'logo',
-    icon: '/static/logo.png',
-    path: 'pages/category/category'
-},
+        label: '鲜花水果',
+        icon: '/static/鲜花水果.jpg',
+        path: 'pages/category/category'
+    },
+    {
+        label: '蔬菜豆制品',
+        icon: '/static/蔬菜豆制品.jpg',
+        path: 'pages/category/category'
+    },
+    {
+        label: '肉禽蛋',
+        icon: '/static/肉禽蛋.jpg',
+        path: 'pages/category/category'
+    },
+    {
+        label: '纸品湿巾',
+        icon: '/static/纸品湿巾.png',
+        path: 'pages/category/category'
+    },
+    {
+        label: '烧烤露营',
+        icon: '/static/烧烤露营.jpg',
+        path: 'pages/category/category'
+    },
+    {
+        label: '乳品烘培',
+        icon: '/static/乳品烘培.png',
+        path: 'pages/category/category'
+    },
+    {
+        label: '日用清洁',
+        icon: '/static/日用清洁.jpg',
+        path: 'pages/category/category'
+    },
+    {
+        label: '粮油调味',
+        icon: '/static/粮油调味.png',
+        path: 'pages/category/category'
+    },
+    {
+        label: '酒水饮料',
+        icon: '/static/酒水饮料.jpg',
+        path: 'pages/category/category'
+    },
+    {
+        label: '海鲜水产',
+        icon: '/static/海鲜水产.jpg',
+        path: 'pages/category/category'
+    },
+    {
+        label: '个护美妆',
+        icon: '/static/个护美妆.png',
+        path: 'pages/category/category'
+    },
+    {
+        label: '冻品面点',
+        icon: '/static/冻品面点.jpg',
+        path: 'pages/category/category'
+    },
+    {
+        label: '打边炉',
+        icon: '/static/打边炉.png',
+        path: 'pages/category/category'
+    },
+    {
+        label: '宠物用品',
+        icon: '/static/宠物用品.jpeg',
+        path: 'pages/category/category'
+    },
+    {
+        label: '冰淇淋',
+        icon: '/static/冰淇淋.jpg',
+        path: 'pages/category/category'
+    },
+    {
+        label: 'logo',
+        icon: '/static/logo.png',
+        path: 'pages/category/category'
+    },
 ]
 const handleNavClick = (item: NavList) => {
     if (!item.path) return
@@ -176,22 +174,23 @@ const handleNavClick = (item: NavList) => {
         /* 内容超出时仅中间区域可滚动*/
     }
 
-    /* 底部区域 - 固定 30%*/
+    /* 底部区域 - 固定 15%*/
     &__footer {
-        flex: 0 0 15%;
-        /* 不放大、不缩小、基准值30%*/
+        width: 100%;
+        flex: 0 0 10%;
         background-color: #e9ecef;
+        overflow: hidden;
     }
 }
 
 .grid-nav {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows:repeat(4,1fr) ; //4 等分
+    grid-template-rows: repeat(4, 1fr); //4 等分
     background-color: aqua;
     gap: 8rpx;
     padding: 10rpx;
-    height: 100%;//撑满父容器
+    height: 100%; //撑满父容器
 }
 
 /* 1. 单个网格项：使用 Flexbox 垂直排列 */
@@ -223,6 +222,5 @@ const handleNavClick = (item: NavList) => {
     font-size: 14px;
     text-align: center;
     line-height: 1.2;
-    color: red;
 }
 </style>

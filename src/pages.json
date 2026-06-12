@@ -3,7 +3,7 @@
 		{
 			"path": "pages/index/index",
 			"style": {
-				"navigationBarTitleText": "婚礼定制"
+				"navigationBarTitleText": "首页"
 			}
 		},
 		{
@@ -33,7 +33,7 @@
 	},
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
-		"navigationBarTitleText": "婚礼定制",
+		"navigationBarTitleText": "WeiChat miniapp",
 		"navigationBarBackgroundColor": "#F8F8F8",
 		"backgroundColor": "#F8F8F8"
 	},

@@ -15,6 +15,8 @@ declare module 'vue' {
     WdButton: typeof import('wot-design-uni/components/wd-button/wd-button.vue')['WdButton']
     WdImg: typeof import('wot-design-uni/components/wd-img/wd-img.vue')['WdImg']
     WdInput: typeof import('wot-design-uni/components/wd-input/wd-input.vue')['WdInput']
+    WdSearc: typeof import('wot-design-uni/components/wd-searc/wd-searc.vue')['WdSearc']
+    WdSearch: typeof import('wot-design-uni/components/wd-search/wd-search.vue')['WdSearch']
     WdSwiper: typeof import('wot-design-uni/components/wd-swiper/wd-swiper.vue')['WdSwiper']
   }
 }

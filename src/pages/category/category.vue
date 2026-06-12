@@ -14,7 +14,7 @@
             </scroll-view>
             <view class="category__main">
                 <scroll-view class="category__sub" scroll-y>
-                    <view v-for="item in secondaryCategories">{{ item.name }}</view>
+                    <view class="category__sub__text"v-for="item in secondaryCategories">{{ item.name }}</view>
                 </scroll-view>
                 <scroll-view class="category__products" scroll-y>
                     <view v-for="product in products">商品卡</view>
@@ -137,6 +137,12 @@ const handleChange = (vale: string) => {
         width: 20%;
         overflow-y: auto;
         //background-color: rgb(44, 71, 71);
+        &__text{
+            display: flex;
+            flex: 1;
+            height: 100%;
+            font: 1em sans-serif;
+        }
     }
 
     &__products {

@@ -13,8 +13,10 @@
                 </view>
             </scroll-view>
             <view class="category__main">
-                <scroll-view class="category__sub" scroll-y>
-                    <view class="category__sub__text"v-for="item in secondaryCategories">{{ item.name }}</view>
+                <scroll-view class="category__sub" scroll-y enable-flex>
+                    <view style="margin-top:10px;margin-bottom: 5px;margin-right: 5px;" v-for="item in secondaryCategories">
+                    <text style="height:100%;">{{ item.name }}</text>
+                    </view>
                 </scroll-view>
                 <scroll-view class="category__products" scroll-y>
                     <view v-for="product in products">商品卡</view>
@@ -119,7 +121,7 @@ const handleChange = (vale: string) => {
     &__header {
         height: 80px;
         white-space: nowrap;
-        
+        background-color: aquamarine;
         &-inner {
             display: flex;
             flex-direction: row;
@@ -134,15 +136,11 @@ const handleChange = (vale: string) => {
     }
 
     &__sub {
+        display: flex;
+        flex-direction: column;
         width: 20%;
         overflow-y: auto;
-        //background-color: rgb(44, 71, 71);
-        &__text{
-            display: flex;
-            flex: 1;
-            height: 100%;
-            font: 1em sans-serif;
-        }
+        background-color: rgb(233, 238, 238);
     }
 
     &__products {
